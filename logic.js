@@ -44,6 +44,14 @@ function buttonPressed(val) {
         document.getElementById('input').value = state.val2;
       }
     }
+  } else if (val === '%') {
+    if (state.val2 === '') {
+      state.val1 = state.val1 / 100;
+      document.getElementById('input').value = state.val1;
+    } else {
+      state.val2 = state.val2 / 100;
+      document.getElementById('input').value = state.val2;
+    }
   } else {
     state.operand = val;
     state.decimal = false;
